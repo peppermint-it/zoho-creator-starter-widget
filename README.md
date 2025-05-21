@@ -2,6 +2,8 @@
 
 Starter template for building Zoho Creator widgets with Tailwind CSS and pre-wired Zoho API access.
 
+> ℹ️ Note: You must place `key.pem` and `cert.pem` in the project root to enable local HTTPS development via `zet run`.
+
 ## Usage
 
 - `zet run` – Start local dev server with live reload.
