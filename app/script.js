@@ -1,6 +1,6 @@
 const CONFIG = {
   APP_NAME: "app_name",
-  REPORT_NAME: "report_name"
+  REPORT_NAME: "report_name",
 };
 
 let recordId = null;
@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (recordId) {
       loadData(recordId);
     }
+  });
 });
+
 const loadData = (recordId) => {
   const config = {
     app_name: CONFIG.APP_NAME,
@@ -46,4 +48,3 @@ function submitForm() {
     }
   });
 }
-

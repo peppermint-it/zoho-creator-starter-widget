@@ -5,7 +5,10 @@
   "scripts": {
     "start": "node server/index.js",
     "build:css": "npx @tailwindcss/cli -i ./app/input.css -o ./app/output.css",
-    "dev:css": "npx @tailwindcss/cli -i ./app/input.css -o ./app/output.css --watch"
+    "dev:css": "npx @tailwindcss/cli -i ./app/input.css -o ./app/output.css --watch",
+    "zet:run": "zet run",
+    "zet:pack": "zet pack",
+    "zet:validate": "zet validate"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.5",
@@ -22,6 +25,7 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.5",
-    "tailwindcss-cli": "^0.1.2"
+    "tailwindcss-cli": "^0.1.2",
+    "zoho-extension-toolkit": "^1.0.22"
   }
 }
