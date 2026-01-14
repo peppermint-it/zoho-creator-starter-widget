@@ -3,5 +3,13 @@
   "cspDomains": {
     "connect-src": []
   },
-  "config": []
+  "config": [
+    {
+      "name": "recordId",
+      "type": "string",
+      "placeholder": "Record ID (optional)",
+      "defaultValue": "",
+      "help": "Map a Creator Page Variable or set a fixed value for testing; used as a fallback when `?recordId=` is not present."
+    }
+  ]
 }

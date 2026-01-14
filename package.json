@@ -2,16 +2,20 @@
   "name": "zoho-app",
   "version": "0.0.1",
   "private": true,
+  "workspaces": [
+    "frontend"
+  ],
   "scripts": {
     "start": "node server/index.js",
-    "build:css": "npx @tailwindcss/cli -i ./app/input.css -o ./app/output.css",
-    "dev:css": "npx @tailwindcss/cli -i ./app/input.css -o ./app/output.css --watch",
     "zet:run": "zet run",
     "zet:pack": "zet pack",
-    "zet:validate": "zet validate"
+    "zet:validate": "zet validate",
+    "widget:build": "npm --prefix frontend run build",
+    "widget:watch": "npm --prefix frontend run build:watch",
+    "dev:host": "node server/dev-server.js",
+    "widget:pack": "npm run widget:build && npm run zet:pack"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.5",
     "body-parser": "^1.14.2",
     "chalk": "^1.1.3",
     "errorhandler": "^1.4.2",
@@ -22,10 +26,6 @@
     "serve-index": "^1.9.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.1.5",
-    "tailwindcss-cli": "^0.1.2",
     "zoho-extension-toolkit": "^1.0.22"
   }
 }
