@@ -7,7 +7,6 @@ Starter template for building Zoho Creator widgets with Tailwind CSS and pre-wir
 # Clone the starter kit to a new folder
 git clone <TEMPLATE_REPO_URL> my-new-widget
 cd my-new-widget
-
 # Remove the old git history and init a fresh repo
 rm -rf .git
 git init
@@ -30,11 +29,13 @@ openssl req -newkey rsa:2048 -new -nodes -x509 -days 365 \
   -subj "/CN=localhost"
 ```
 
+Install the packages: `npm install`.
+
 ## Usage
 
-- `zet run` – Start local dev server with live reload.
-- `zet pack` – Build and zip the widget for upload.
-- `zet validate` – Run validation checks before deploying.
+- `npm run zet:run` – Start local dev server with live reload.
+- `npm run zet:pack` – Build and zip the widget for upload.
+- `npm run zet:validate` – Run validation checks before deploying.
 
 Upload the resulting `.zip` from `dist/` to your Zoho Creator widget configuration.
 
