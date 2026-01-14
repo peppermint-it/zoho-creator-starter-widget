@@ -51,6 +51,7 @@ npm run widget:build
 - `npm run zet:validate` – Validate the widget package/manifest.
 - `npm run widget:pack` – Build and zip the widget for upload (`dist/`).
 - `npm run zet:pack` – Pack without rebuilding (useful once `app/` is already built).
+- `npm run widget:clean` – Remove generated build outputs in `app/` without deleting non-generated files.
 
 Upload the resulting `.zip` from `dist/` to your Zoho Creator widget configuration.
 
@@ -85,6 +86,7 @@ npm --prefix frontend run dev
 
 - Source lives in `frontend/` and builds into `app/` for ZET packaging.
 - Tailwind is wired via the Vite plugin; add UI packages as needed.
+- `app/` is not wiped by Vite; `npm run widget:clean` prevents old hashed assets from accumulating.
 
 ## Zoho API Integration
 

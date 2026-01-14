@@ -10,8 +10,9 @@
     "zet:run": "zet run",
     "zet:pack": "zet pack",
     "zet:validate": "zet validate",
-    "widget:build": "npm --prefix frontend run build",
-    "widget:watch": "npm --prefix frontend run build:watch",
+    "widget:clean": "node scripts/clean-app-build.js",
+    "widget:build": "npm run widget:clean && npm --prefix frontend run build",
+    "widget:watch": "npm run widget:clean && npm --prefix frontend run build:watch",
     "dev:host": "node server/dev-server.js",
     "widget:pack": "npm run widget:build && npm run zet:pack"
   },

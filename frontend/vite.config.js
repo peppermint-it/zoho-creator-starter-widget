@@ -10,7 +10,7 @@ export default defineConfig({
   base: "./",
   build: {
     outDir: "../app",
-    emptyOutDir: true,
+    emptyOutDir: false,
     rollupOptions: {
       input: {
         widget: path.resolve(__dirname, "widget.html"),
